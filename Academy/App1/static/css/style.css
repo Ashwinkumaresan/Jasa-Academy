@@ -1,0 +1,33 @@
+body{
+    background-image:url('../images/background.jpg');
+    background-attachment:fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+.login-css{
+    border: 2px solid white;
+    border-radius: 8px;
+}
+.display-1{
+    font-size: clamp(
+        90px, 50% + 20px, 800px
+    );
+}
+.main{
+    margin: 80px 0px;
+    display: flex;
+    align-items: center;
+}
+
+
+@media only screen and (min-width: 1200px) and (max-width:1400px){
+    .main{
+        margin: 110px 0px;
+    }
+}
+@media only screen and (min-width: 1400px) {
+    .main{
+        margin: 120px 0px;
+    }
+}

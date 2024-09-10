@@ -1,0 +1,107 @@
+{%load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JASA Academy competition</title>
+    <link rel="icon" href="{%static 'images/img/jasalogo.png'%}">
+
+    <link rel="stylesheet" href="{%static 'css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{%static 'css/style-comp.css'%}">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="alert alert-info" role="alert">
+           Start resigter or click back to return.
+          </div>
+          <div class="row">
+            <div class="col-3 offset-md-6 ">
+                <a href="{ % url 'competition'%}"> 
+                    <button class="btn btn-secondary text-nowrap" type="button">Back</button>
+                </a>
+            </div>
+        </div>
+
+        <form class="row g-3 was-validated"  method="post" >
+          {% csrf_token %}
+          <input type="hidden" name="access_key" value="751cab5d-76af-4868-97f4-d4092bfc4d51">
+            <div class="col-md-4">
+              <label  style="color: black;"for="validationServer01" class="form-label">First name</label>
+              <input type="text" name="Firstname" class="form-control is-valid" id="validationServer01" value="" placeholder="First name" required>
+              <div class="invalid-feedback">
+                Please provide you name.
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label for="validationServer02" class="form-label"  style="color: black;">Last name</label>
+              <input type="text" name="LastName" class="form-control is-valid" id="validationServer02" value="" placeholder="Last name" required>
+              <div class="invalid-feedback">
+                Please provide your last name
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label for="validationServerUsername" class="form-label"  style="color: black;">Username</label>
+              <div class="input-group has-validation">
+                <span class="input-group-text" id="inputGroupPrepend3">@</span>
+                <input type="text" name="Email" class="form-control is-invalid" id="validationServerUsername" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" placeholder="your_email@.com" required>
+                <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                  Please choose a username.
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label for="validationServer03" class="form-label"  style="color: black;">City</label>
+              <input type="text" name="City" class="form-control is-invalid" id="validationServer03" aria-describedby="validationServer03Feedback" required>
+              <div id="validationServer03Feedback" class="invalid-feedback">
+                Please provide a valid city.
+              </div>
+            </div>
+            <div class="col-md-3">
+              <label for="validationServer04" class="form-label"  style="color: black;">State</label>
+              <select name="state" class="form-select is-invalid" id="validationServer04" aria-describedby="validationServer04Feedback" required>
+                <option selected disabled value="">Choose...</option>
+                <option>Tamil Nadu</option>
+              </select>
+              <div id="validationServer04Feedback" class="invalid-feedback">
+                Please select a valid state.
+              </div>
+            </div>
+            <div class="col-md-3">
+              <label for="validationServer05" class="form-label"  style="color: black;">Zip</label>
+              <input type="text" name="pincode" class="form-control is-invalid" id="validationServer05" aria-describedby="validationServer05Feedback" required>
+              <div id="validationServer05Feedback" class="invalid-feedback">
+                Please provide a valid zip.
+              </div>
+            </div>
+            <div class="mb-3">
+                <select name="competition" class="form-select" required aria-label="select example">
+                  <option value="">Choose your competition.</option>
+                  <option value="1">Drawing</option>
+                  <option value="2">Painting</option>
+                  <option value="3">Speaking</option>
+                  <option value="4">Quiz</option>
+                </select>
+                <div class="invalid-feedback">Please select your option.</div>
+              </div>
+            
+              <div class="mb-3">
+                <input type="file" name="file" class="form-control" aria-label="file example" required>
+                <div class="invalid-feedback">Provide your vaild payment proof.</div>
+              </div>
+            
+            <div class="col-12">
+              <a href="% url 'verify' %" >
+              <button class="btn btn-primary" type="submit">Submit form</button>
+              </a>
+            </div>
+        </form>
+    </div>
+
+
+    
+
+  <script src="{%static 'js/jquery.min.js'%}"></script>
+  <script src="{%static 'js/bootstrap.min.js'%}"></script>
+</body>
+</html>

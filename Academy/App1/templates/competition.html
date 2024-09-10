@@ -1,0 +1,84 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JASA Academy competition</title>
+    <link rel="icon" href="{% static 'images/img/jasalogo.png'%}">
+
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/style-comp.css'%}">
+    <link rel="stylesheet" href="{% static 'css/animation.css'%}">
+</head>
+<body>
+    <div class="back m-5">
+        <a href="{% url 'home'%}">
+            <button class="btn">
+
+                <svg style="display: inline;" xmlns="http://www.w3.org/2000/svg " width="32" height="32" viewBox="0 0 24 24"><path fill="#ffffff" d="M10 22L0 12L10 2l1.775 1.775L3.55 12l8.225 8.225z "/></svg> 
+            </button>
+        </a>
+    </div>
+    <div>
+        <h1 class="mt-5 ms-5">
+            Start your game by registering..!
+        </h1>
+    </div>
+    <div class="container mt-5">
+        <hr>
+        <div class="row animation">
+            <div class="col-lg-4 col-md-6 col-xl-3">
+                <img class="img-fluid" src="{% static 'images/img/Frame 4.png'%}" alt="Drawing" width="100%">
+            </div>
+            <div class="col mt-5" style="font-size: 20px; font-weight: 600;" >
+                We are excited to announce a drawing competition at our college! Open to all, this event invites artists of all ages to showcase their creativity. Esteemed judges will select the top three winners, who will receive art supplies, gift vouchers, and certificates of excellence. The winning artworks will be displayed in the college gallery and featured in our annual magazine. Submission guidelines and deadlines will be shared on our website and notice boards. Join us and let your creativity shine!
+            </div>
+            <hr class="mt-4">
+        </div>
+        <div class="row animation">
+            <div class="col-lg-4 col-md-6 col-xl-3">
+                <img class="img-fluid" src="{% static 'images/img/Frame 6.png'%}" alt="Drawing" width="100%">
+            </div>
+            <div class="col mt-5" style="font-size: 20px; font-weight: 600;" >
+                Welcome to our exciting college painting competition! This is your chance to unleash your creativity and showcase your artistic talents. Open to all college students, this competition promises a fantastic prize for the winner.
+                For more details, please visit the student affairs office or contact us directly through the website. Don't miss this opportunity to participate and shine. Happy painting!
+            </div>
+            <hr class="mt-4">
+        </div>
+        <div class="row animation">
+            <div class="col-lg-4 col-md-6 col-xl-3">
+                <img class="img-fluid" src="{% static 'images/img/Frame 8.png'%}" alt="Drawing" width="100%">
+            </div>
+            <div class="col mt-5" style="font-size: 20px; font-weight: 600;" >
+                We are thrilled to announce an upcoming speaking competition open to all college students. This is a great opportunity to showcase your public speaking skills and share your ideas. The winner will be awarded a fantastic prize, so don’t miss your chance to shine on stage. For more details, visit the student affairs office or check our college website. Prepare your speeches and get ready to impress!
+            </div>
+            <hr class="mt-4">
+        </div>
+        <div class="row animation">
+            <div class="col-lg-4 col-md-6 col-xl-3">
+                <img class="img-fluid" src="{% static 'images/img/Frame 9.png'%}" alt="Drawing" width="100%">
+            </div>
+            <div class="col mt-5" style="font-size: 20px; font-weight: 600;" >
+                We are excited to announce an upcoming quiz competition open to all college students. Test your knowledge and compete for the top spot! The winner will be awarded a fantastic prize, so don’t miss your chance to show off your smarts. For more details, visit the student affairs office or check our college website. Get ready to challenge yourself and have fun!
+            </div>
+            <hr class="mt-4">
+        </div>
+        <div class="row">
+            <div class="col-3 offset-md-6 ">
+                <a href="{% url 'register_form'%}">
+                    <button class="btn btn-primary text-nowrap">Register now!</button>
+                </a>
+            </div>
+        </div>
+        <hr>
+    </div>
+
+    
+
+    <script src="{% static 'js/jquery.min.js'%}"></script>
+    <script src="{% static  'js/bootstrap.min.js'%}"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="{% static 'images/img/jasalogo.png'%}">
+
+</head>
+<body>
+    <form action="https://api.web3forms.com/submit" method="POST">
+
+        <input type="hidden" name="access_key" value="751cab5d-76af-4868-97f4-d4092bfc4d51">
+    
+        
+        <input type="text" name="name" class="form-control is-valid" id="validationServer01" value="" placeholder="First name" required>
+        <input type="text" name="area" required>
+        <input type="email" name="email" required>
+        <textarea name="message" required></textarea>
+        <button type="submit">Submit Form</button>
+    
+    </form>
+
+</body>
+</html>
